@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en-US" class="loading-site no-js">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://www.ijert.org/xmlrpc.php" />
+
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>Real Time Twitter Sentiment Analysis using Natural Language Processing &#8211; IJERT</title>
+<meta name='robots' content='max-image-preview:large' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+		<!-- Meta Tag Manager -->
+		<meta name="publicationmedia-verification" content="9cb143d7-c001-43e9-a1ec-6e311e5b4f40" />
+		<!-- / Meta Tag Manager -->
+<meta name="viewport" content="width=device-width, initial-scale=1" /><link rel='prefetch' href='https://www.ijert.org/wp-content/themes/flatsome/assets/js/flatsome.js?ver=8e60d746741250b4dd4e' />
+<link rel='prefetch' href='https://www.ijert.org/wp-content/themes/flatsome/assets/js/chunk.slider.js?ver=3.19.4' />
+<link rel='prefetch' href='https://www.ijert.org/wp-content/themes/flatsome/assets/js/chunk.popups.js?ver=3.19.4' />
+<link rel='prefetch' href='https://www.ijert.org/wp-content/themes/flatsome/assets/js/chunk.tooltips.js?ver=3.19.4' />
+<link rel="alternate" type="application/rss+xml" title="IJERT &raquo; Feed" href="https://www.ijert.org/feed" />
+<link rel="alternate" type="application/rss+xml" title="IJERT &raquo; Comments Feed" href="https://www.ijert.org/comments/feed" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta property="gs_meta_revision" content="1.1"><meta name="application-name" content="IJERT"><meta name="citation_publisher" content="IJERT-International Journal of Engineering Research & Technology" /><meta name="citation_journal_title" content="International Journal of Engineering Research & Technology" /><meta name="citation_issn" content="2278-0181" /><meta name="citation_article_type" content="Full-length article" /><link rel="canonical" href="https://www.ijert.org/research/real-time-twitter-sentiment-analysis-using-natural-language-processing-IJERTV9IS070406.pdf" /><meta name="description" content="Real Time Twitter Sentiment Analysis using Natural Language Processing - written by Anupama B S , Rakshith D B , Rahul Kumar M  published on 2020/07/27 download full article with reference data and citations"><meta name="citation_title" content="Real Time Twitter Sentiment Analysis using Natural Language Processing"><meta name="citation_pii" content="IJERTV9IS070406">	<meta name="citation_author" content="Anupama B S"><meta name="citation_author" content="Rakshith D B"><meta name="citation_author" content="Rahul Kumar M"><meta name="citation_author" content="Navaneeth M"><meta name="citation_publication_date" content="2020/07/27">	<meta name="citation_volume" content="9"><meta name="citation_issue" content="7"><meta name="citation_pdf_url" content="https://www.ijert.org/research/real-time-twitter-sentiment-analysis-using-natural-language-processing-IJERTV9IS070406.pdf"><meta name="citation_doi" content="10.17577/IJERTV9IS070406"><meta name="citation_online_date" content="2020/07/27"><meta property="citation_abstract_html_url" content="https://www.ijert.org/real-time-twitter-sentiment-analysis-using-natural-language-processing"><meta property="citation_fulltext_html_url" content="https://www.ijert.org/real-time-twitter-sentiment-analysis-using-natural-language-processing"><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@graph": [
+    {
+        "@id": "#issue",
+        "@type": "PublicationIssue",
+        "issueNumber": "7",
+        "datePublished": "2020",
+        "isPartOf": {
+            "@id": "#periodical",
+            "@type": [
+                "PublicationVolume",
+                "Periodical"
+            ],
+            "name": "International Journal of Engineering Research & Technology",
+            "issn": [
+                "2278-0181"
+            ],
+            "volumeNumber": "9",
+            "publisher": "IJERT-International Journal of Engineering Research & Technology"
+        }
+    },
+    {
+        "@type": "ScholarlyArticle",
+        "isPartOf": "#issue",
+	"headline" : "Real Time Twitter Sentiment Analysis using Natural Language Processing",
+	"image" : "https://www.ijert.com/images/default_publication_preview_large.png",
+        "description": "Download Reference Data on IJERT | On 27-07-2020 by Anupama B S , Rakshith D B , Rahul Kumar M , Navaneeth M published Real Time Twitter Sentiment Analysis using Natural Language Processing",
+        "name": "Real Time Twitter Sentiment Analysis using Natural Language Processing",
+        "author": "Anupama B S ",	
+	"license": "http://creativecommons.org/licenses/by/4.0/",
+	"url": "https://www.ijert.org/real-time-twitter-sentiment-analysis-using-natural-language-processing"
+    }
+  ]
+}
+</script><link rel="alternate" type="application/rss+xml" title="IJERT &raquo; Real Time Twitter Sentiment Analysis using Natural Language Processing Comments Feed" href="https://www.ijert.org/real-time-twitter-sentiment-analysis-using-natural-language-processing/feed" />
+<link rel='stylesheet' id='post-views-counter-frontend-css' href='https://www.ijert.org/wp-content/plugins/post-views-counter/css/frontend.min.css?ver=1.5.5' type='text/css' media='all' />
+<link rel='stylesheet' id='flatsome-main-css' href='https://www.ijert.org/wp-content/themes/flatsome/assets/css/flatsome.css?ver=3.19.4' type='text/css' media='all' />
+<style id='flatsome-main-inline-css' type='text/css'>
+@font-face {
+				font-family: "fl-icons";
+				font-display: block;
+				src: url(https://www.ijert.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.19.4);
+				src:
+					url(https://www.ijert.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.19.4) format("embedded-opentype"),
+					url(https://www.ijert.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.19.4) format("woff2"),
+					url(https://www.ijert.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.19.4) format("truetype"),
+					url(https://www.ijert.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.19.4) format("woff"),
+					url(https://www.ijert.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.19.4#fl-icons) format("svg");
+			}
+</style>
+<link rel='stylesheet' id='flatsome-style-css' href='https://www.ijert.org/wp-content/themes/flatsome-child/style.css?ver=6.8.2' type='text/css' media='all' />
+<script type="text/javascript" id="post-views-counter-frontend-js-before">
+/* <![CDATA[ */
+var pvcArgsFrontend = {"mode":"js","postID":37757,"requestURL":"https:\/\/www.ijert.org\/wp-admin\/admin-ajax.php","nonce":"1510fc0fa0","dataStorage":"cookies","multisite":false,"path":"\/","domain":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.ijert.org/wp-content/plugins/post-views-counter/js/frontend.min.js?ver=1.5.5" id="post-views-counter-frontend-js"></script>
+<script type="text/javascript" src="https://www.ijert.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.ijert.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://www.ijert.org/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.ijert.org/wp-json/wp/v2/posts/37757" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.ijert.org/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.8.2" />
+<link rel='shortlink' href='https://www.ijert.org/?p=37757' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.ijert.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ijert.org%2Freal-time-twitter-sentiment-analysis-using-natural-language-processing" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.ijert.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.ijert.org%2Freal-time-twitter-sentiment-analysis-using-natural-language-processing&#038;format=xml" />
+<link rel="canonical" href="https://www.ijert.org/real-time-twitter-sentiment-analysis-using-natural-language-processing" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XBE64WKXXF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XBE64WKXXF');
+</script>
+
+
+<style id="custom-css" type="text/css">:root {--primary-color: #e78c03;--fs-color-primary: #e78c03;--fs-color-secondary: #007784;--fs-color-success: #7a9c59;--fs-color-alert: #b20000;--fs-experimental-link-color: #334862;--fs-experimental-link-color-hover: #111;}.tooltipster-base {--tooltip-color: #fff;--tooltip-bg-color: #000;}.off-canvas-right .mfp-content, .off-canvas-left .mfp-content {--drawer-width: 300px;}.container-width, .full-width .ubermenu-nav, .container, .row{max-width: 1320px}.row.row-collapse{max-width: 1290px}.row.row-small{max-width: 1312.5px}.row.row-large{max-width: 1350px}.header-main{height: 90px}#logo img{max-height: 90px}#logo{width:155px;}.header-bottom{min-height: 40px}.header-top{min-height: 30px}.transparent .header-main{height: 90px}.transparent #logo img{max-height: 90px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 170px;}.header.show-on-scroll,.stuck .header-main{height:90px!important}.stuck #logo img{max-height: 90px!important}.search-form{ width: 80%;}.header-bg-color {background-color: rgba(255,255,255,0.9)}.header-bottom {background-color: #1E73BE}.stuck .header-main .nav > li > a{line-height: 50px }.header-bottom-nav > li > a{line-height: 40px }@media (max-width: 549px) {.header-main{height: 90px}#logo img{max-height: 90px}}.nav-dropdown-has-arrow.nav-dropdown-has-border li.has-dropdown:before{border-bottom-color: #FFFFFF;}.nav .nav-dropdown{border-color: #FFFFFF }.nav-dropdown{font-size:100%}.nav-dropdown-has-arrow li.has-dropdown:after{border-bottom-color: #FFFFFF;}.nav .nav-dropdown{background-color: #FFFFFF}.header-top{background-color:#F7F7F7!important;}body{color: #000000}h1,h2,h3,h4,h5,h6,.heading-font{color: #000000;}.header:not(.transparent) .header-bottom-nav.nav > li > a{color: #ffffff;}.absolute-footer, html{background-color: #e5e5e5}.nav-vertical-fly-out > li + li {border-top-width: 1px; border-top-style: solid;}.label-new.menu-item > a:after{content:"New";}.label-hot.menu-item > a:after{content:"Hot";}.label-sale.menu-item > a:after{content:"Sale";}.label-popular.menu-item > a:after{content:"Popular";}</style><style id="kirki-inline-styles"></style></head>
+
+<body class="wp-singular post-template-default single single-post postid-37757 single-format-standard wp-theme-flatsome wp-child-theme-flatsome-child full-width box-shadow lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border">
+
+
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+<div id="wrapper">
+
+	
+	<header id="header" class="header header-full-width has-sticky sticky-jump">
+		<div class="header-wrapper">
+			<div id="top-bar" class="header-top flex-has-center">
+    <div class="flex-row container">
+      <div class="flex-col hide-for-medium flex-left">
+          <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
+                        </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-center">
+          <ul class="nav nav-center nav-small  nav-divided">
+              <li class="html custom html_topbar_left"><center><strong class="uppercase" style="color:#333;font-size:20px;">International Journal of Engineering Research & Technology (IJERT)</strong></center></li>          </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-right">
+         <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
+              <li class="html header-social-icons ml-0">
+	<div class="social-icons follow-icons" ><a href="https://www.facebook.com/ijert.journal/" target="_blank" data-label="Facebook" class="icon primary button circle facebook tooltip" title="Follow on Facebook" aria-label="Follow on Facebook" rel="noopener nofollow" ><i class="icon-facebook" ></i></a><a href="mailto:info@ijert.org" data-label="E-mail" target="_blank" class="icon primary button circle email tooltip" title="Send us an email" aria-label="Send us an email" rel="nofollow noopener" ><i class="icon-envelop" ></i></a></div></li>
+          </ul>
+      </div>
+
+            <div class="flex-col show-for-medium flex-grow">
+          <ul class="nav nav-center nav-small mobile-nav  nav-divided">
+              <li class="html custom html_topbar_left"><center><strong class="uppercase" style="color:#333;font-size:20px;">International Journal of Engineering Research & Technology (IJERT)</strong></center></li>          </ul>
+      </div>
+      
+    </div>
+</div>
+<div id="masthead" class="header-main nav-dark">
+      <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+
+          <!-- Logo -->
+          <div id="logo" class="flex-col logo">
+            
+<!-- Header logo -->
+<a href="https://www.ijert.org/" title="IJERT - International Journal of Engineering Research &amp; Technology" rel="home">
+		<img width="119" height="74" src="https://www.ijert.org/wp-content/uploads/2018/07/journal-of-engineering-research-logo.png" class="header_logo header-logo" alt="IJERT"/><img  width="119" height="74" src="https://www.ijert.org/wp-content/uploads/2018/07/journal-of-engineering-research-logo.png" class="header-logo-dark" alt="IJERT"/></a>
+          </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+              <li class="nav-icon has-icon">
+  <div class="header-button">		<a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="icon primary button circle is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+
+		  <i class="icon-menu" ></i>
+		  <span class="menu-title uppercase hide-for-small">Menu</span>		</a>
+	 </div> </li>
+            </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+            <ul class="header-nav header-nav-main nav nav-left  nav-uppercase" >
+                          </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-uppercase">
+              <li class="html custom html_topbar_right"><a href="/our-indexing" target=_blank><img src="/wp-content/uploads/ijert-indexing-partners-2019.png" alt="IJERT is INdexed with Google Scholar, Research Gate, Pubmed, Semantic Scholar" title="IJERT is indexed in all major open-access databases like Google Scholar" /> </a></li>            </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+              <li class="html header-social-icons ml-0">
+	<div class="social-icons follow-icons" ><a href="https://www.facebook.com/ijert.journal/" target="_blank" data-label="Facebook" class="icon primary button circle facebook tooltip" title="Follow on Facebook" aria-label="Follow on Facebook" rel="noopener nofollow" ><i class="icon-facebook" ></i></a><a href="mailto:info@ijert.org" data-label="E-mail" target="_blank" class="icon primary button circle email tooltip" title="Send us an email" aria-label="Send us an email" rel="nofollow noopener" ><i class="icon-envelop" ></i></a></div></li>
+            </ul>
+          </div>
+
+      </div>
+
+            <div class="container"><div class="top-divider full-width"></div></div>
+      </div>
+<div id="wide-nav" class="header-bottom wide-nav nav-dark flex-has-center">
+    <div class="flex-row container">
+
+                        <div class="flex-col hide-for-medium flex-left">
+                <ul class="nav header-nav header-bottom-nav nav-left  nav-box nav-uppercase">
+                                    </ul>
+            </div>
+            
+                        <div class="flex-col hide-for-medium flex-center">
+                <ul class="nav header-nav header-bottom-nav nav-center  nav-box nav-uppercase">
+                    <li id="menu-item-1902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1902 menu-item-design-default"><a href="https://www.ijert.org/" class="nav-top-link">Home</a></li>
+<li id="menu-item-1879" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1879 menu-item-design-default has-dropdown"><a href="https://www.ijert.org/about-journal" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">About Journal<i class="icon-angle-down" ></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-bold">
+	<li id="menu-item-1919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="https://www.ijert.org/mission-scope">Mission &#038; Scope</a></li>
+	<li id="menu-item-33294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33294"><a target="_blank" rel="noopener" href="https://ems.ijert.org/editorial-board">Editorial Board</a></li>
+	<li id="menu-item-1887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1887"><a href="https://www.ijert.org/review-process">Peer-Review Policy</a></li>
+	<li id="menu-item-1881" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1881"><a href="https://www.ijert.org/publication-ethics-policy">Publication Ethics Policy</a></li>
+	<li id="menu-item-33461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33461"><a href="https://www.ijert.org/journals-policies">Journal Policies</a></li>
+	<li id="menu-item-1886" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1886"><a href="https://www.ijert.org/our-indexing">Indexing</a></li>
+	<li id="menu-item-1882" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1882"><a href="https://www.ijert.org/join-as-reviewer">Join as Reviewer</a></li>
+	<li id="menu-item-1885" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1885"><a href="https://www.ijert.org/conference-partners">Conference Partners</a></li>
+	<li id="menu-item-1888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1888"><a href="https://www.ijert.org/faqs">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-1889" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1889 menu-item-design-default"><a href="https://www.ijert.org/call-for-papers" class="nav-top-link">Call for Papers</a></li>
+<li id="menu-item-1884" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1884 menu-item-design-default"><a href="https://www.ijert.org/topics" class="nav-top-link">Topics</a></li>
+<li id="menu-item-1903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1903 menu-item-design-default has-dropdown"><a href="https://www.ijert.org/guidelines-for-authors" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Authors Guide<i class="icon-angle-down" ></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-bold">
+	<li id="menu-item-1900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1900"><a href="https://www.ijert.org/statistics-impact-factor">Journal Statistics – 2023-2024</a></li>
+	<li id="menu-item-1894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1894"><a href="https://www.ijert.org/submit-manuscript">Submit Manuscript</a></li>
+	<li id="menu-item-1892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1892"><a href="https://www.ijert.org/processing-charges">Journal Charges (APC)</a></li>
+	<li id="menu-item-1893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1893"><a href="https://www.ijert.org/register-as-volunteer">Register as Volunteer</a></li>
+	<li id="menu-item-1890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1890"><a href="https://www.ijert.org/downloads">Downloads</a></li>
+	<li id="menu-item-1891" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1891"><a href="https://www.ijert.org/faq">FAQ</a></li>
+</ul>
+</li>
+<li id="menu-item-1899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1899 menu-item-design-default"><a href="https://www.ijert.org/published-issue-archive" class="nav-top-link">Archive</a></li>
+<li id="menu-item-1898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1898 menu-item-design-default has-dropdown"><a href="https://www.ijert.org/conference-special-issue-proposals" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Conferences<i class="icon-angle-down" ></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-bold">
+	<li id="menu-item-28965" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28965"><a target="_blank" rel="noopener" href="https://ems.ijert.org/upcoming-conference-special-issue.php">Upcoming Conferences</a></li>
+</ul>
+</li>
+<li id="menu-item-1901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1901 menu-item-design-default"><a href="https://www.ijert.org/conference-proceedings" class="nav-top-link">CONFERENCE PROCEEDINGS</a></li>
+<li id="menu-item-37445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-37445 menu-item-design-default has-dropdown"><a href="https://www.ijert.org/publish-dissertation-thesis-online" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Thesis Publication<i class="icon-angle-down" ></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-bold">
+	<li id="menu-item-37451" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37451"><a href="https://www.ijert.org/thesis-archive">Thesis Archive</a></li>
+	<li id="menu-item-37449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37449"><a href="https://www.ijert.org/thesis-publication-faqs">Thesis Publication FAQs</a></li>
+	<li id="menu-item-37450" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37450"><a href="https://www.ijert.org/thesis-publication-charges">Thesis Publication Charges</a></li>
+</ul>
+</li>
+<li id="menu-item-1906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1906 menu-item-design-default"><a href="https://www.ijert.org/contact-us" class="nav-top-link">Contact Us</a></li>
+<li id="menu-item-29003" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29003 menu-item-design-default has-dropdown"><a target="_blank" rel="noopener" href="https://ems.ijert.org/" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Login<i class="icon-angle-down" ></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-bold">
+	<li id="menu-item-29005" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29005"><a target="_blank" rel="noopener" href="https://ems.ijert.org/author-login">Author Login</a></li>
+	<li id="menu-item-29004" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29004"><a target="_blank" rel="noopener" href="https://ems.ijert.org/reviewer-login">Reviewer Login</a></li>
+</ul>
+</li>
+                </ul>
+            </div>
+            
+                        <div class="flex-col hide-for-medium flex-right flex-grow">
+              <ul class="nav header-nav header-bottom-nav nav-right  nav-box nav-uppercase">
+                   <li class="header-contact-wrapper">
+		<ul id="header-contact" class="nav nav-divided nav-uppercase header-contact">
+		
+			
+			
+			
+				</ul>
+</li>
+              </ul>
+            </div>
+            
+                          <div class="flex-col show-for-medium flex-grow">
+                  <ul class="nav header-bottom-nav nav-center mobile-nav  nav-box nav-uppercase">
+                      <li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative is-normal"></div>	</div>
+</li>
+                  </ul>
+              </div>
+            
+    </div>
+</div>
+
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div>		</div>
+	</header>
+
+	
+	<main id="main" class="">
+
+<div id="content" class="blog-wrapper blog-single page-wrapper">
+	
+
+<div class="row row-large row-divided ">
+
+	<div class="large-9 col">
+		
+
+
+<article id="post-37757" class="post-37757 post type-post status-publish format-standard hentry category-volume-09-issue-07-july-2020">
+	<div class="article-inner ">
+		<header class="entry-header">
+	<div class="entry-header-text entry-header-text-top text-center">
+		<h6 class="entry-category is-xsmall"><a href="https://www.ijert.org/category/volume-09-issue-07-july-2020" rel="category tag">Volume 09, Issue 07 (July 2020)</a></h6><h1 class="entry-title">Real Time Twitter Sentiment Analysis using Natural Language Processing</h1><div class="entry-divider is-divider small"></div>
+	</div>
+	</header>
+		<div class="entry-content single-page">
+
+	<div style='padding:16px 0px 0px 0px;'><img src='wp-content/uploads/doi-ijert-logo.png' /><strong> DOI : </strong><strong>10.17577/IJERTV9IS070406</strong></div><p> 	<div id="gap-1286189985" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-1286189985 {
+  padding-top: 10px;
+}
+</style>
+	</div>
+	 <a href="https://www.ijert.org/research/real-time-twitter-sentiment-analysis-using-natural-language-processing-IJERTV9IS070406.pdf" target="_blank" class="button primary is-primary is-medium" rel="noopener"  >
+		<span>Download Full-Text PDF</span>
+	</a>
+ <a href="#cite" class="button primary"  >
+		<span>Cite this Publication</span>
+	</a>
+	<div id="cite"
+	     class="lightbox-by-id lightbox-content mfp-hide lightbox-white "
+	     style="max-width:600px ;padding:20px">
+		Anupama B S , Rakshith D B , Rahul Kumar M , Navaneeth M, 2020, Real Time Twitter Sentiment Analysis using Natural Language Processing, INTERNATIONAL JOURNAL OF ENGINEERING RESEARCH &#038; TECHNOLOGY (IJERT) Volume 09, Issue 07 (July 2020), 	</div>
+	
+	 <img decoding="async" src="https://www.ijert.org/author-photo/V9IS7/IJERTV9IS070406.jpg" /> </p>
+<ul>
+<li><strong>Open Access </strong> <img decoding="async" src="../images/open-access-logo.png" /> </li>
+<li> <div class="post-views content-post post-37757 entry-meta load-static">
+				<span class="post-views-icon dashicons dashicons-chart-bar"></span> <span class="post-views-label">Article Download / Views:</span> <span class="post-views-count">1,891</span>
+			</div> </li>
+<li> <strong>Authors :</strong> Anupama B S , Rakshith D B , Rahul Kumar M , Navaneeth M </li>
+<li> <strong>Paper ID :</strong> IJERTV9IS070406 </li>
+<li> <strong> Volume &amp; Issue : </strong> <a href="https://www.ijert.org/volume-09-issue-07-july-2020" target="_blank" style="color:blue;" rel="noopener noreferrer">Volume 09, Issue 07 (July 2020) </a></li>
+<li> <strong> Published (First Online): </strong> 27-07-2020 </li>
+<li> <strong>ISSN (Online) :</strong> 2278-0181 </li>
+<li> <strong>Publisher Name :</strong> IJERT </li>
+<li> <strong>License: </strong><a href="http://creativecommons.org/licenses/by/4.0/" rel="license"><img decoding="async" style="border-width: 0;" src="https://i.creativecommons.org/l/by/4.0/80x15.png" alt="Creative Commons License" /></a> This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a> </li>
+</ul>
+<p> 	<div id="gap-634822502" class="gap-element clearfix" style="display:block; height:auto;">
+		
+<style>
+#gap-634822502 {
+  padding-top: 15px;
+}
+</style>
+	</div>
+	 <div class="accordion"> 	<div id="accordion-299168262" class="accordion-item">
+		<a id="accordion-299168262-label" class="accordion-title plain" href="#accordion-item-pdf-version" aria-expanded="false" aria-controls="accordion-299168262-content" >
+			<button class="toggle" aria-label="Toggle"><i class="icon-angle-down"></i></button>
+			<span>PDF Version</span>
+		</a>
+		<div id="accordion-299168262-content" class="accordion-inner" aria-labelledby="accordion-299168262-label" >
+			 <a class="fancybox-pdf" href="https://www.ijert.org/research/real-time-twitter-sentiment-analysis-using-natural-language-processing-IJERTV9IS070406.pdf"> View </a> 		</div>
+	</div>
+	 	<div id="accordion-4176181152" class="accordion-item">
+		<a id="accordion-4176181152-label" class="accordion-title plain active" href="#accordion-item-text-only-version" aria-expanded="true" aria-controls="accordion-4176181152-content" >
+			<button class="toggle" aria-label="Toggle"><i class="icon-angle-down"></i></button>
+			<span>Text Only Version</span>
+		</a>
+		<div id="accordion-4176181152-content" class="accordion-inner" style="display: block;" aria-labelledby="accordion-4176181152-label" >
+			 </p>
+<div style="text-align: justify;text-justify: inter-word;">
+<div itemProp="mainEntity" itemScope="itemscope" itemType="http://schema.org/ScholarlyArticle" > <meta itemProp="datePublished" name="datePublished" content="27-07-2020"/> <meta itemProp="image" name="image" content="https://www.ijert.org/images/default_publication_preview_large.png"/> </p>
+<h4 itemProp="headline">Real Time Twitter Sentiment Analysis using Natural Language Processing</h4>
+<p>1Anupama B S, 2Rakshith D B, 3Rahul Kumar M, 4Navaneeth M</p>
+<p>#Department of Computer Science &amp; Engineering, Siddaganga Institute of Technology,</p>
+<p>Tumkur, India</p>
+<p>AbstractSocial media websites have emerged as one of the platforms to raise users opinions and influence the way any business is commercialized. Opinion of people matters a lot to analyze how the propagation of information impacts the lives in a large-scale network like Twitter. Data analysis of the tweets determine the polarity and inclination of vast population towards specific topic, item or entity. These days, the applications of such analysis can be easily observed during public elections, movie promotions, brand endorsements and many other fields. In this project, we will go through making a program that analyzes the nature of tweets on a particular topic. The primary aim is to provide a method for analyzing polarity score in noisy twitter streams. This paper reports on the design of a data analysis, extracting vast number of tweets.</p>
+<p>Results classify user&#39;s perception via tweets into positive and negative. In this project, we will go through making a program that analyzes the nature of tweets on a particular topic. The user will be able to input a keyword(hashtag) and get the nature on it based on the latest tweets that contain the input keyword. Each tweet extracted classified based on its sentiment whether it is a positive or negative. Data were collected on movie reviews which were on IMDB Website. NaÃ¯ve Bayes machine learning algorithm was used. The result from this model was tested using various testing metrics. Moreover, our model demonstrates strong performance on mining texts extracted directly from Twitter.</p>
+<p>KeywordsTwitter,Natural language processing,Naive Bayes,sentiment analysis, microblogging.</p>
+<ol>
+<li>
+<p>INTRODUCTION</p>
+<p>As the internet is growing larger, its reach to the masses is becoming wider. Social Media and Microblogging platforms like Twitter, Facebook, Tumblr dominate in spreading encapsulated news and trending topics across the globe at a rapid pace. A topic or news becomes trending if many users are contributing their opinion and judgments, thereby making it a valuable source of online perception on that particular topic. These topics generally intended to spread awareness or to promote political campaigns, public figures during elections, product endorsements, and entertainment like award shows, movies. Large organizations and firms take advantage of people&#39;s feedback on these platforms to improve their products and services which further help in enhancing marketing strategies. One such example can be leaking the pictures of the upcoming iPhone to create a hype to extract people&#39;s emotions and market the product before its release. Thus, there is a huge potential of discovering and analyzing interesting patterns from the infinite social media data for business-driven applications. Sentiment analysis is the prediction of emotions in a word, sentence, or corpus of</p>
+<p>documents. It is intended to serve as an application to understand the opinion, attitudes, and emotions expressed within an online mention. The intention is to gain or access an overview of the wider public opinion behind certain topics. Precisely, it is a paradigm of categorizing conversations into positive, negative, or neutral labels. Many people use social media sites for networking with other people and to stay up- to-date with news and current events. These sites (Twitter, Facebook, Instagram, google+) offer a platform for people to voice their opinions. For example, people quickly post their reviews online as soon as they watch a movie and then start a series of comments to discuss the acting skills depicted in the movie. This kind of information forms a basis for people to evaluate, a rate about the performance of not only any movie but about other products and to know about whether it will be a success or not. This type of vast information on these sites can be used for marketing and social studies. Therefore, sentiment analysis has wide applications and includes emotion mining, polarity, classification, and influence analysis. Twitter is an online networking site driven by tweets which are 280 characters limited messages. Thus, the character limit enforces the use of hashtags for text classification. Currently, around 6500 tweets are published per second, which results in approximately 561.6 million tweets per day. These streams of tweets are generally noisy reflecting multi-topic, changing attitudes information is an unfiltered and unstructured format. Twitter sentiment analysis involves the use of natural language processing to extract, identify to characterize the sentiment content.</p>
+<ol>
+<li>
+<p>Objective:</p>
+<ul>
+<li>
+<p>To implement an algorithm for automatic classification of text into positive or negative.</p>
+</li>
+<li>
+<p>To determine the opinion of mass in positive or negative towards the subject of interest.</p>
+</li>
+<li>
+<p>Graphical representation of the analysis in the form of bar graph, pie-chart.</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>
+<p>LITERATURE SURVEY</p>
+<p>Sentiment analysis is a growing area of Natural Language Processing with research ranging from document level classification to learning the polarity of words and phrases. Given the character limitations on tweets, classifying the sentiment of Twitter messages is most similar to sentence level sentiment analysis however, the informal and specialized language used in tweets, as well as the very nature of the microblogging domain make Twitter sentiment analysis a very different task. Its an open question how well the features and</p>
+<p>techniques used on more well-formed data will transfer to the microblogging domain. Just in the past year there have been a number of papers looking at Twitter sentiment and buzz Other researchers have begun to explore the use of part-of-speech features but results remain mixed. Features common to microblogging (e.g., emoticons) are also common, but there has been little investigation into the usefulness of existing sentiment resources developed on non-microblogging data. Researchers have also begun to investigate various ways of automatically collecting training data. Several researchers rely on emoticons for defining their training data.Others also use hashtags for creating training data, but they limit their experiments to sentiment/non-sentiment classification, rather than 2-way polarity classification, as we do. We use data mining methods and apply the following Machine Learning algorithm for this second classification to arrive at the best result:</p>
+<ul>
+<ul>
+<li>
+<p>Naive Bayes :</p>
+<p>Naive Bayes Classification: Many language processing tasks are tasks of classification, although luckily our classes are much easier to define than those of Borges. In this classification we present the naive Bayes algorithms classification, demonstrated on an important classification problem: text categorization, the task of classifying an entire text by assigning it a text categorization label drawn from some set of labels. We focus on one common text categorization task, sentiment analysis, the ex-sentiment analysis traction of sentiment, the positive or negative orientation that a writer expresses toward some object.</p>
+<p>Naive Bayes classifier is the simplest and the fastest classifier. Many researchers claim to have gotten best results using this classifier. For a given tweet, if we need to find the label for it, we find the probabilities of all the labels, given that feature and then select the label with maximum probability. The accuracy of Unirams is the lowest at 79.67%. The accuracy increases if we also use Negation detection (81.66%) or higher order n-grams (86.68%). We see that if we use both Negation detection and higher order n-grams, the accuracy is marginally less than just using higher order n-grams (85.92%). We can also note that accuracies for double step classifier are lesser than those for corresponding single step.</p>
+</li>
+<li>
+<p>Natural Language Processing :</p>
+</li>
+</ul>
+</ul>
+<p>Natural language processing (NLP) is a field of artificial intelligence in which computers analyze, understand, and derive meaning from human language in a smart and useful way. By utilizing NLP, developers can organize and structure knowledge to perform tasks such as automatic summarization, translation, named entity recognition, relationship extraction, sentiment analysis, speech recognition, and topic segmentation.</p>
+<p>Apart from common word processor operations that treat text like a mere sequence of symbols, NLP considers the hierarchical structure of language: several words make a phrase, several phrases make a sentence and, ultimately, sentences convey ideas, John Rehling, an NLP expert at Meltwater Group, said in How Natural Language Processing Helps Uncover Social Media Sentiment. By analyzing language for its meaning, NLP systems have long filled useful roles, such as correcting grammar, converting speech to text and automatically translating between languages. NLP is</p>
+<p>used to analyze text, allowing machines to understand how humans speak. This human-computer interaction enables real- world applications like automatic text summarization, sentiment analysis, topic extraction, named entity recognition, parts-of-speech tagging, relationship extraction, stemming, and more.</p>
+<p>NLP is commonly used for text mining, machine translation, and automated question answering. NLP is characterized as a difficult problem in computer science. Human language is rarely precise, or plainly spoken. To understand human language is to understand not only the words, but the concepts and how theyre linked together to create meaning. Despite language being one of the easiest things for the human mind to learn, the ambiguity of language is what makes natural language processing a difficult problem for computers to master.</p>
+<p>Aim of the project</p>
+<p>In this project we are going to consider any sports event, movie trending on a given time and analyse the opinion of the public using real time data present on social media platform twitter. By using the tweets, we try to predict or come to a decision based on the mass opinion which are expressed in the tweets. With more than 321 million active users, sending a daily average of 500 million Tweets, Twitter allows businesses to reach a broad audience and connect with customers without intermediaries. On the downside, its harder for brands to quickly detect negative content, and if it goes viral you might end up with an unexpected PR crisis on your hands. This is one of the reasons why social listening monitoring conversation and feedback in social media has become a crucial process in social media marketing. Monitoring Twitter allows companies to understand their audience, keep on top of whats being said about their brand and their competitors, and discover new trends in the industry. Are users talking positively or negatively about a product? Well, thats exactly what sentiment analysis determines.</p>
+<ol>
+<ol>
+<ol>
+<li>
+<p>Online Commerce</p>
+<p>The most general use of sentiment analysis is in ecommerce activities. Websites allows their users to submit their experience about shopping and product qualities. They provide summary for the product and different features of the product by assigning ratings or scores. Customers can easily view opinions and recommendation information on whole product as well as specific product features. Graphical summary of the overall product and its features is presented to users. Popular merchant websites like amazon.com provides review from editors and also from customers with rating information. http://tripadvisor.in is a popular website that provides reviews on hotels, travel destinations. They contain</p>
+<p>75 millions opinions and reviews worldwide. Sentiment analysis helps such websites by converting dissatisfied customers into promoters by analyzing this huge volume of opinions.</p>
+</li>
+<li>
+<p>Voice of the Market (VOM)</p>
+<p>Voice of the Market is about determining what customers are feeling about products or services of competitors. Accurate and timely information from the Voice of the Market helps in gaining competitive advantage and new product development.</p>
+<p>Detection of such information as early as possible helps in direct and target key marketing campaigns. Sentiment Analysis helps corporate to get customer opinion in realtime. This real-time information helps them to design new marketing strategies, improve product features and can predict chances of product failure. Zhang et al.proposed weakness finder system which can help manufacturers find their product weakness from Chinese reviews by using aspects based sentiment analysis.</p>
+</li>
+<li>
+<p>Voice of the Customer (VOC)</p>
+<p>Voice of the Customer is concern about what individual customer is saying about products or services. It means analyzing the reviews and feedback of the customers. VOC is a key element of Customer Experience Management. VOC helps in identifying new opportunities for product inventions. Extracting customer opinions also helps in identifying functional requirements of the products and some non- functional requirements like performance and cost.</p>
+</li>
+<li>
+<p>Brand Reputation Management</p>
+<p>Brand Reputation Management is concern about managing your reputation in market. Opinions from customers or any other parties can damage or enhance your reputation. Brand Reputation Management (BRM) is a product and company focused rather than customer. Now, one-to-many conversations are taking place online at a high rate. That creates opportunities for organizations to manage and strengthen brand reputation. Now Brand perception is determined not only by advertising, public relations and corporate messaging. Brands are now a sum of the conversations about them. Sentiment analysis helps in determining how companys brand, product or service is being perceived by community online.</p>
+</li>
+<li>
+<p>Government</p>
+<p>Sentiment analysis helps government in assessing their strength and weaknesses by analyzing opinions from public. For example, our PM enforced complete nationwide lockdown even when there was no outbreak in our country, kudos to our PM. this example clearly shows positive sentiment about government. Whether it is tracking citizens opinions on a new 108 systems, identifying strengths and weaknesses in a recruitment campaign in government job, assessing success of electronic submission of tax returns, or many other areas, we can see the potential for sentiment analysis.</p>
+<p>Advantages of Proposed System:</p>
+<ul>
+<li>
+<p>There is no need to manually start a survey because in twitter there are already available tweets which are opinions of the people</p>
+</li>
+<li>
+<p>There is no need to manually take tweets one by one.</p>
+</li>
+<li>
+<p>The user just has to download the application. There is no external hardware components required.</p>
+</li>
+</ul>
+</li>
+</ol>
+</ol>
+</ol>
+<p>Aim of the proposed system:</p>
+<p>The application should be functionally competent as such that it must loaded with features that serve the purpose for which it is created. The features in the application should map to the needs of the users which the app is designed to meet. The application UI should be simple enough for a user to understand how the application works. The application should work successfully without crashing, and people all over the world should be able to use the application without any ambiguity.</p>
+<ol>
+<li>
+<p>General Working of the System</p>
+</li>
+</ol>
+<p>The application mainly consists of the following tasks</p>
+[1] Building and Training the Machine Learning Model</p>
+<p>In this step the end user has nothing to do butthis step would be done in the background the end user has no knowledge about this process</p>
+<p>Fig. 1. Giving the keyword as input</p>
+<p>In this step the user has to give the keyword which should be present in all the tweets which we are going to extract from twitter</p>
+<p>TABLE I. Preprocess the tweets extracted</p>
+<p>In this step also the user has nothing to do but the extracted tweets has to be preprocessed before sending these tweets to the ML model</p>
+<p>a. Getting the prediction of sentiment of extracted tweets using our Machine Learning Model</p>
+<p>In this step our ML model predicts the sentiment of the tweets but the results will be stored in an array.</p>
+<ul>
+<li>
+<p>Displaying the results in graphical representation</p>
+</li>
+</ul>
+<p>In this step the results will be displayed to the end user in graphical manner like bar graph or pie chart for better understanding of the results.</p>
+</li>
+<li>
+<p>DESIGN AND IMPLEMENTATION</p>
+<p>A. Proposed System</p>
+<p>An idea which can overcome the disadvantages being faced by traditional survey method to get people opinions, to develop a Machine Learning Model by training the model to categorize the tweets based on sentiment of the tweet and make the model as accurate as possible, first the user will give input i.e. the keyword for extracting the tweets and then the extracted tweets will be categorized by the Machine Learning Model which will be either positive or negative tweet and then the output will be displayed in graphical manner for better understanding of the results.</p>
+<p>C. Activity Diagrams</p>
+<p>Another representation of the software is activity diagram which is a graphical representation of workflows of stepwise activities and actions with support for choice, iteration and concurrency. It visually presents a series of actions or flow of control in a system similar to flow chart or a data flow diagram. Figure 1 shows the step by step procedure of how the Machine Learning Model is built and trained for prediction</p>
+<p>Figure 1: Activity diagram for our ML model</p>
+<p>The Figure 2 shows step by step process of the end user side program</p>
+<p>Figure 2: Activity diagram for the user side program</p>
+</li>
+<li>
+<p>RESULTS</p>
+<p>Fig 1: Confusion Matrix of NLP Model(82.9% Accuracy)</p>
+<p>Fig 2: Entry page where we have to enter the hashtag/keyword</p>
+<p>Fig2.1:Results are display in pie-chart</p>
+<p>Fig2.2: Results are display in bar graph</p>
+<p>Fig3: Entry page where we have to enter the hashtag/keyword</p>
+<p>Fig3.1: Results are displayed in pie-chart</p>
+</li>
+<li>
+<p>CONCLUSION</p>
+</li>
+</ol>
+<p>The task of sentiment analysis, especially in the domain of micro-blogging, is still in the developing stage and far from complete. Therefore we would like to propose a couple of ideas which we feel are worth exploring in the future and may result in further improved performance. For now, we have worked with only the very simplest unigram models, we could improve those models by adding additional information like closeness of the word with a negation word. We could specify a window prior to the word (a window could for example be of 2 or 3 words) under consideration and the effect of negation may be incorporated into the model if it lies within that window.</p>
+<p>The closer the negation word is to the unigram word whose prior polarity is to be calculated, the more it should affect the polarity. For example, if the negation is right next to the word, it may simply reverse the polarity of that word, and farther the negation is from the word the more minimized ifs effect should be. Apart from this, we are currently only focusing on unigrams and the effect of bigrams and trigrams may be explored. As reported in the literature review section when bigrams are used along with unigrams this usually enhances performance. However, for bigrams and trigrams to be an effective feature we need a much more labeled data set than our meager 9,000 tweets. So say instead of calculating a single probability for each word like P(word | obj) we could instead have multiple probabilities for each according to the Part of Speech the word belongs to. used a somewhat similar approach and claims that appending POS information for every unigram results in no significant change in performance (with Naive Bayes performing slightly better and SVM having a slight decrease in performance), while there is a significant decrease in accuracy if only adjective unigrams are used as features. However, these results are for the classification of reviews and maybe verified for sentiment analysis on microblogging websites like Twitter. One more feature we that is worth exploring is whether the information about the relative position of the word in a tweet has any effect on the performance of the classifier explored a similar feature and reported negative results, their results were based on reviews which are very different from tweets and they worked on an extremely simple model. In this project, we are focusing on general sentiment analysis. For example, we noticed that users generally use specific types of keywords which can be divided into a couple of distinct classes, namely: media/movies/music, celebrities, products/brands, sports/sportsmen, politics/politicians. So we can attempt to perform separate sentiment analysis on tweets that only belong to one of these classes (i.e. the training data would not be general but specific to one of these categories) and compare the results we get if we apply general sentiment analysis on it instead.</p>
+<p>FUTURE WORKS</p>
+<p>Currently, this project is done using the NaÃ¯ve Bayes Algorithm which is one of the Machine Learning Algorithm which only got us an accuracy of around 83%. In the future, we will be exploring and implementing the Deep Learning Algorithms to our NLP model in order to increase the accuracy of our model and to get better predictions from our model.</p>
+<p>REFERENCES</p>
+<ol>
+<li>
+<p>Efthymios Kouloumpis and Johanna Moore,IJCSI International Journal of Computer Science Issues, Vol. 9, Issue 4, No 3, July 2012</p>
+</li>
+<li>
+<p>S. Batra and D. Rao, Entity Based Sentiment Analysis on Twitter,</p>
+<p>Stanford University,2010</p>
+</li>
+<li>
+<p>Saif M.Mohammad and Xiaodan zhu ,Sentiment Analysis on of social media texts:,2014</p>
+</li>
+<li>
+<p>Ekaterina kochmar, University of Cambridge, at the Cambridge coding Academy Data Science.2016</p>
+</li>
+<li>
+<p>Manju Venugopalan and Deepa Gupta, Exploring Sentiment Analysis on Twitter Data, IEEE 2015</p>
+</li>
+<li>
+<p>Brett Duncan and Yanqing Zhang, Neural Networks for Sentiment Analysis on Twitter.2017</p>
+</li>
+<li>
+<p>Afroze Ibrahim Baqapuri, Twitter Sentiment Analysis: The Good the Bad and the OMG! Proceedings of the Fifth International AAAI Conference on Weblogs and Social Media.2011</p>
+</li>
+<li>
+<p>Kishori K. Pawar, Pukhraj P Shrishrimal, R. R. Deshmukh, Twitter Sentiment Analysis: A Review International Journal of Scientific &amp; Engineering Research, Volume 6, Issue 4, April-2015</p>
+</li>
+</ol></div>
+</div>
+<p> 		</div>
+	</div>
+	 </div>
+
+	
+	<div class="blog-share text-center"><div class="is-divider medium"></div><div class="social-icons share-icons share-row relative" ><a href="whatsapp://send?text=Real%20Time%20Twitter%20Sentiment%20Analysis%20using%20Natural%20Language%20Processing - https://www.ijert.org/real-time-twitter-sentiment-analysis-using-natural-language-processing" data-action="share/whatsapp/share" class="icon primary button round tooltip whatsapp show-for-medium" title="Share on WhatsApp" aria-label="Share on WhatsApp" ><i class="icon-whatsapp" ></i></a><a href="https://www.facebook.com/sharer.php?u=https://www.ijert.org/real-time-twitter-sentiment-analysis-using-natural-language-processing" data-label="Facebook" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px'); return false;" target="_blank" class="icon primary button round tooltip facebook" title="Share on Facebook" aria-label="Share on Facebook" rel="noopener nofollow" ><i class="icon-facebook" ></i></a><a href="https://twitter.com/share?url=https://www.ijert.org/real-time-twitter-sentiment-analysis-using-natural-language-processing" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px'); return false;" target="_blank" class="icon primary button round tooltip twitter" title="Share on Twitter" aria-label="Share on Twitter" rel="noopener nofollow" ><i class="icon-twitter" ></i></a><a href="mailto:?subject=Real%20Time%20Twitter%20Sentiment%20Analysis%20using%20Natural%20Language%20Processing&body=Check%20this%20out%3A%20https%3A%2F%2Fwww.ijert.org%2Freal-time-twitter-sentiment-analysis-using-natural-language-processing" class="icon primary button round tooltip email" title="Email to a Friend" aria-label="Email to a Friend" rel="nofollow" ><i class="icon-envelop" ></i></a><a href="https://pinterest.com/pin/create/button?url=https://www.ijert.org/real-time-twitter-sentiment-analysis-using-natural-language-processing&media&description=Real%20Time%20Twitter%20Sentiment%20Analysis%20using%20Natural%20Language%20Processing" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px'); return false;" target="_blank" class="icon primary button round tooltip pinterest" title="Pin on Pinterest" aria-label="Pin on Pinterest" rel="noopener nofollow" ><i class="icon-pinterest" ></i></a><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.ijert.org/real-time-twitter-sentiment-analysis-using-natural-language-processing&title=Real%20Time%20Twitter%20Sentiment%20Analysis%20using%20Natural%20Language%20Processing" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px'); return false;" target="_blank" class="icon primary button round tooltip linkedin" title="Share on LinkedIn" aria-label="Share on LinkedIn" rel="noopener nofollow" ><i class="icon-linkedin" ></i></a><a href="https://tumblr.com/widgets/share/tool?canonicalUrl=https://www.ijert.org/real-time-twitter-sentiment-analysis-using-natural-language-processing" target="_blank" class="icon primary button round tooltip tumblr" onclick="window.open(this.href,this.title,'width=500,height=500,top=300px,left=300px'); return false;" title="Share on Tumblr" aria-label="Share on Tumblr" rel="noopener nofollow" ><i class="icon-tumblr" ></i></a></div></div></div>
+
+
+
+        <nav role="navigation" id="nav-below" class="navigation-post">
+	<div class="flex-row next-prev-nav bt bb">
+		<div class="flex-col flex-grow nav-prev text-left">
+			    <div class="nav-previous"><a href="https://www.ijert.org/effect-of-cold-joint-on-stratified-slabs-2" rel="prev"><span class="hide-for-small"><i class="icon-angle-left" ></i></span> Effect of Cold Joint on Stratified Slabs</a></div>
+		</div>
+		<div class="flex-col flex-grow nav-next text-right">
+			    <div class="nav-next"><a href="https://www.ijert.org/evaluation-of-mechanical-properties-of-sisal-glass-fiber-reinforced-epoxy-composites" rel="next">Evaluation of Mechanical Properties of  Sisal /Glass Fiber Reinforced Epoxy Composites <span class="hide-for-small"><i class="icon-angle-right" ></i></span></a></div>		</div>
+	</div>
+
+	    </nav>
+
+    	</div>
+</article>
+
+
+
+
+<div id="comments" class="comments-area">
+
+	
+	
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply</h3><p class="must-log-in">You must be <a href="https://www.ijert.org/wp-login.php?redirect_to=https%3A%2F%2Fwww.ijert.org%2Freal-time-twitter-sentiment-analysis-using-natural-language-processing">logged in</a> to post a comment.</p>	</div><!-- #respond -->
+	
+</div>
+	</div>
+	<div class="post-sidebar large-3 col">
+				<div id="secondary" class="widget-area " role="complementary">
+		<aside id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><center>
+		<h4>
+					<a href="https://www.ijert.org/volume-14-issue-06-june-2025" target="_blank">CURRENT ISSUE <img src="https://www.ijert.org/wp-content/uploads/new-animated.gif" /></a>
+				<a href="https://ems.ijert.org/submit-manuscript" target="_blank">
+<img src="/wp-content/uploads/call-for-papers-submit-paper-online.png" alt="Submit Paper Online" width=94/> </a>
+
+</h4>  
+		<p>
+	<a href="/call-for-papers"><img src="/wp-content/uploads/call-for-papers-september-2025-3.png" alt="Call for Papers September 2025"/> </a>
+		
+	</p>
+	
+
+
+		<h4><a href="https://www.ijert.org/our-indexing" target="_blank">Journal Indexing</a> <img src="https://www.ijert.org/wp-content/uploads/updated_last_date.gif" /></h4>
+<p>
+	<a href="https://portal.issn.org/resource/ISSN/2278-0181" target="_blank"> 
+	<img src="/wp-content/uploads/2019/01/ijert_issn_logo.jpg" alt="ISSN Registration No"/> </a><br>
+<strong>ISSN Online: 2278-0181</strong>
+</p>
+
+	<p><a href="https://ems.ijert.org/join-as-reviewer" target=_blank >
+		<img src="/wp-content/uploads/join-as-reviewer-engineering-journal.png" alt="Join as Reviewer"/> </a>
+</p>
+	
+<p>
+	<img src="/wp-content/uploads/2019/01/anti_plagiarism_ijert.png" alt="Anti-Plagiarism Policy"/>
+</p>
+
+
+	</center>
+
+</div></aside>
+		<aside id="recent-posts-2" class="widget widget_recent_entries">
+		<span class="widget-title "><span>Recent Posts</span></span><div class="is-divider small"></div>
+		<ul>
+											<li>
+					<a href="https://www.ijert.org/an-edge-computing-approach-for-real-time-wildlife-detection-and-alert-system-using-yolov8-on-raspberry-pi-5">An Edge Computing Approach for Real-Time Wildlife Detection and Alert System using YOLOv8 on Raspberry Pi 5</a>
+									</li>
+											<li>
+					<a href="https://www.ijert.org/mathematical-analysis-of-reactive-and-non-reactive-flow-and-transport-of-contaminants-in-saturated-zone-of-aquifers">Mathematical Analysis of Reactive and Non-Reactive Flow and Transport of Contaminants in Saturated Zone of Aquifers</a>
+									</li>
+											<li>
+					<a href="https://www.ijert.org/dynamics-and-limit-cycles-in-a-holling-type-ii-predator-prey-model">Dynamics and Limit Cycles in a Holling Type II Predator–Prey Model</a>
+									</li>
+											<li>
+					<a href="https://www.ijert.org/investing-in-gfrp-rebar-production-costs-and-roi-analysis">Investing in GFRP Rebar Production: Costs and ROI Analysis</a>
+									</li>
+											<li>
+					<a href="https://www.ijert.org/direct-multi-objective-optimization-of-all-on-four-implant-parameters-across-three-saudi-jawbone-morphologies">Direct Multi-Objective Optimization of All-on-Four Implant Parameters Across Three Saudi Jawbone Morphologies</a>
+									</li>
+					</ul>
+
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><span class="widget-title "><span>Recent Comments</span></span><div class="is-divider small"></div><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Sreejith</span> on <a href="https://www.ijert.org/how-to-improve-performance-of-high-traffic-web-applications#comment-57716">How To Improve Performance of High Traffic Web Applications</a></li><li class="recentcomments"><span class="comment-author-link">Peter</span> on <a href="https://www.ijert.org/cost-and-waste-evaluation-of-expanded-polystyrene-eps-model-house-in-kenya#comment-57714">Cost and Waste Evaluation of Expanded Polystyrene (EPS) Model House in Kenya</a></li><li class="recentcomments"><span class="comment-author-link">Ushus Maria Joseph</span> on <a href="https://www.ijert.org/real-time-detection-of-phishing-attacks-in-edge-devices#comment-57325">Real Time Detection of Phishing Attacks in Edge Devices</a></li><li class="recentcomments"><span class="comment-author-link">motsoko</span> on <a href="https://www.ijert.org/structural-design-of-interlocking-concrete-paving-block#comment-56701">Structural Design of Interlocking Concrete Paving Block</a></li><li class="recentcomments"><span class="comment-author-link">Priya</span> on <a href="https://www.ijert.org/the-role-and-potential-of-information-technology-in-agricultural-development#comment-55936">The Role and Potential of Information Technology in Agricultural Development</a></li></ul></aside></div>
+			</div>
+</div>
+
+</div>
+
+
+</main>
+
+<footer id="footer" class="footer-wrapper">
+
+	
+<!-- FOOTER 1 -->
+
+<!-- FOOTER 2 -->
+
+
+
+<div class="absolute-footer dark medium-text-center text-center">
+  <div class="container clearfix">
+
+    
+    <div class="footer-primary pull-left">
+            <div class="copyright-footer">
+        Copyright 2025 © <strong>IJERT.ORG</strong><img src="/wp-content/uploads/ssl-secure-100-payment-verified.png" alt=100% secured VISA & Master Verified Payment processed by CCAVENUE & Paypal />      </div>
+          </div>
+  </div>
+</div>
+
+<a href="#top" class="back-to-top button icon invert plain fixed bottom z-1 is-outline circle" id="top-link" aria-label="Go to top"><i class="icon-angle-up" ></i></a>
+
+</footer>
+
+</div>
+
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+
+	
+	<div class="sidebar-menu no-scrollbar ">
+
+		
+					<ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
+				<li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative is-normal"></div>	</div>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1902"><a href="https://www.ijert.org/">Home</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1879"><a href="https://www.ijert.org/about-journal">About Journal</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1919"><a href="https://www.ijert.org/mission-scope">Mission &#038; Scope</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33294"><a target="_blank" rel="noopener" href="https://ems.ijert.org/editorial-board">Editorial Board</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1887"><a href="https://www.ijert.org/review-process">Peer-Review Policy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1881"><a href="https://www.ijert.org/publication-ethics-policy">Publication Ethics Policy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-33461"><a href="https://www.ijert.org/journals-policies">Journal Policies</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1886"><a href="https://www.ijert.org/our-indexing">Indexing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1882"><a href="https://www.ijert.org/join-as-reviewer">Join as Reviewer</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1885"><a href="https://www.ijert.org/conference-partners">Conference Partners</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1888"><a href="https://www.ijert.org/faqs">FAQs</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1889"><a href="https://www.ijert.org/call-for-papers">Call for Papers</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1884"><a href="https://www.ijert.org/topics">Topics</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1903"><a href="https://www.ijert.org/guidelines-for-authors">Authors Guide</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1900"><a href="https://www.ijert.org/statistics-impact-factor">Journal Statistics – 2023-2024</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1894"><a href="https://www.ijert.org/submit-manuscript">Submit Manuscript</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1892"><a href="https://www.ijert.org/processing-charges">Journal Charges (APC)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1893"><a href="https://www.ijert.org/register-as-volunteer">Register as Volunteer</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1890"><a href="https://www.ijert.org/downloads">Downloads</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1891"><a href="https://www.ijert.org/faq">FAQ</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1899"><a href="https://www.ijert.org/published-issue-archive">Archive</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1898"><a href="https://www.ijert.org/conference-special-issue-proposals">Conferences</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28965"><a target="_blank" rel="noopener" href="https://ems.ijert.org/upcoming-conference-special-issue.php">Upcoming Conferences</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1901"><a href="https://www.ijert.org/conference-proceedings">CONFERENCE PROCEEDINGS</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-37445"><a href="https://www.ijert.org/publish-dissertation-thesis-online">Thesis Publication</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37451"><a href="https://www.ijert.org/thesis-archive">Thesis Archive</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37449"><a href="https://www.ijert.org/thesis-publication-faqs">Thesis Publication FAQs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37450"><a href="https://www.ijert.org/thesis-publication-charges">Thesis Publication Charges</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1906"><a href="https://www.ijert.org/contact-us">Contact Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-29003"><a target="_blank" rel="noopener" href="https://ems.ijert.org/">Login</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29005"><a target="_blank" rel="noopener" href="https://ems.ijert.org/author-login">Author Login</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-29004"><a target="_blank" rel="noopener" href="https://ems.ijert.org/reviewer-login">Reviewer Login</a></li>
+</ul>
+</li>
+<li class="html header-social-icons ml-0">
+	<div class="social-icons follow-icons" ><a href="https://www.facebook.com/ijert.journal/" target="_blank" data-label="Facebook" class="icon primary button circle facebook tooltip" title="Follow on Facebook" aria-label="Follow on Facebook" rel="noopener nofollow" ><i class="icon-facebook" ></i></a><a href="mailto:info@ijert.org" data-label="E-mail" target="_blank" class="icon primary button circle email tooltip" title="Send us an email" aria-label="Send us an email" rel="nofollow noopener" ><i class="icon-envelop" ></i></a></div></li>
+<li class="html custom html_topbar_right"><a href="/our-indexing" target=_blank><img src="/wp-content/uploads/ijert-indexing-partners-2019.png" alt="IJERT is INdexed with Google Scholar, Research Gate, Pubmed, Semantic Scholar" title="IJERT is indexed in all major open-access databases like Google Scholar" /> </a></li><li class="nav-icon has-icon">
+  <div class="header-button">		<a href="#" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" data-color="" class="icon primary button circle is-small" aria-label="Menu" aria-controls="main-menu" aria-expanded="false">
+
+		  <i class="icon-menu" ></i>
+		  <span class="menu-title uppercase hide-for-small">Menu</span>		</a>
+	 </div> </li>
+			</ul>
+		
+		
+	</div>
+
+	
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/flatsome-child\/*","\/wp-content\/themes\/flatsome\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--primary: #e78c03;--wp--preset--color--secondary: #007784;--wp--preset--color--success: #7a9c59;--wp--preset--color--alert: #b20000;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-left: auto !important;margin-right: auto !important;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: underline;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-success-color{color: var(--wp--preset--color--success) !important;}.has-alert-color{color: var(--wp--preset--color--alert) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-success-background-color{background-color: var(--wp--preset--color--success) !important;}.has-alert-background-color{background-color: var(--wp--preset--color--alert) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-success-border-color{border-color: var(--wp--preset--color--success) !important;}.has-alert-border-color{border-color: var(--wp--preset--color--alert) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<script type="text/javascript" src="https://www.ijert.org/wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js"></script>
+<script type="text/javascript" id="flatsome-js-js-extra">
+/* <![CDATA[ */
+var flatsomeVars = {"theme":{"version":"3.19.4"},"ajaxurl":"https:\/\/www.ijert.org\/wp-admin\/admin-ajax.php","rtl":"","sticky_height":"90","stickyHeaderHeight":"0","scrollPaddingTop":"0","assets_url":"https:\/\/www.ijert.org\/wp-content\/themes\/flatsome\/assets\/","lightbox":{"close_markup":"<button title=\"%title%\" type=\"button\" class=\"mfp-close\"><svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"><line x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"><\/line><line x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"><\/line><\/svg><\/button>","close_btn_inside":false},"user":{"can_edit_pages":false},"i18n":{"mainMenu":"Main Menu","toggleButton":"Toggle"},"options":{"cookie_notice_version":"1","swatches_layout":false,"swatches_disable_deselect":false,"swatches_box_select_event":false,"swatches_box_behavior_selected":false,"swatches_box_update_urls":"1","swatches_box_reset":false,"swatches_box_reset_limited":false,"swatches_box_reset_extent":false,"swatches_box_reset_time":300,"search_result_latency":"0"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.ijert.org/wp-content/themes/flatsome/assets/js/flatsome.js?ver=8e60d746741250b4dd4e" id="flatsome-js-js"></script>
+
+</body>
+</html>
